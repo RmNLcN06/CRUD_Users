@@ -8,7 +8,7 @@
     try
     {
         $database = new PDO("mysql:host=$host;dbname=$dbname", $user, $password);
-        $database->setAttributes(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+        $database->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
         $database->exec('SET NAMES "UTF8"');
     }
     catch(PDOException $e)

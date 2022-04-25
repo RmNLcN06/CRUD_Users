@@ -40,6 +40,14 @@ if($_POST)
         require_once('req/_close.php');
         header('Location: index.php');
     }
+    // elseif(isset($_POST['nom'])
+    // || isset($_POST['prenom'])
+    // || isset($_POST['email'])
+    // || isset($_POST['tel']))
+    // {
+    //     $_SESSION['erreur'] = "Le profil de l'utilisateur existe déjà";
+    //     // require_once('req/_close.php');
+    // }
     else 
     {
         $_SESSION['erreur'] = "Le profil de l'utilisateur est incomplet";
@@ -446,8 +454,8 @@ if($_POST)
                                     </div>
                                     <div class="form-group">
                                         <label for="type_utilisateur">Profil</label>
-                                        <select name="user_type">
-                                            <option value="user">User</option>
+                                        <select id="type_utilisateur" name="type_utilisateur">
+                                            <option value="user" selected>User</option>
                                             <option value="admin">Admin</option>
                                         </select>
                                     </div>
