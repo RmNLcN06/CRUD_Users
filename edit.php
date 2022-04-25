@@ -482,7 +482,10 @@ else
                                     </div>
                                     <div class="form-group">
                                         <label for="type_utilisateur">Profil</label>
-                                        <input type="text" id="type_utilisateur" name="type_utilisateur" class="form-control" value="<?= htmlentities($utilisateur['type_utilisateur']); ?>">
+                                        <select name="user_type">
+                                            <option value="user">User</option>
+                                            <option value="admin">Admin</option>
+                                        </select>
                                     </div>
                                     <input type="hidden" name="id" value="<?= $utilisateur['id']; ?>">
                                     <button class="btn btn-primary">Envoyer</button>

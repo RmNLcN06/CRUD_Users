@@ -446,7 +446,10 @@ if($_POST)
                                     </div>
                                     <div class="form-group">
                                         <label for="type_utilisateur">Profil</label>
-                                        <input type="text" id="type_utilisateur" name="type_utilisateur" class="form-control">
+                                        <select name="user_type">
+                                            <option value="user">User</option>
+                                            <option value="admin">Admin</option>
+                                        </select>
                                     </div>
                                     <button class="btn btn-primary">Envoyer</button>
                                 </form>
